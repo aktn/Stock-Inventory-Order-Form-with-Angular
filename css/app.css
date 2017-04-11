@@ -44,6 +44,9 @@ input[type=number] {
   border-radius: 1px;
   box-shadow: 1px 1px 3px 1px #ccc;
   border: 1px solid #eee;
+  display: block;
+  margin-top: 10px;
+  width: 100%;
 }
 button {
   cursor: pointer;
@@ -53,6 +56,7 @@ button {
   padding: 5px 10px;
   text-align: center;
   color: #fff;
+  margin-top: 10px;
 }
 button:disabled {
   cursor: not-allowed;
@@ -75,4 +79,28 @@ h4 {
   font-size: 18px;
   font-weight: 300;
   margin: 0;
+}
+select {
+  -webkit-appearance: none;
+  text-indent: .01px;
+  text-overflow: '';
+  overflow: hidden;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 50px 10px 15px;
+  border-radius: 0;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  background:
+    linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.7) 50%)
+    no-repeat calc(100% - 20px) calc(1em + 4px),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.7) 50%, transparent 50%)
+    no-repeat calc(100% - 15px) calc(1em + 4px);
+  background-size: 5px 5px, 5px 5px;
+}
+app-root {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
 }

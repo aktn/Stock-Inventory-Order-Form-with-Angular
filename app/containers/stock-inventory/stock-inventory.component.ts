@@ -6,15 +6,21 @@ import { FormGroup, FormArray, FormControl } from '@angular/forms';
     styleUrls: ['stock-inventory.component.scss'],
     template: `
         <div>
-            <form [formGroup]="form" (ngSumbit)="onSubmit()">
-                <div formGroupName="store">
-                    <input type="text"
-                           placeholder="Branch ID"
-                           formControlName="branch">
-                    <input type="text"
-                           placeholder="Manager Code"
-                           formControlName="code">
-                </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <stock-branch
+                    [parent]="form">
+                </stock-branch>
+
+                <stock-selector
+                    [parent]="form">
+                </stock-selector>
+
+                <stock-products
+                    [parent]="form">
+                </stock-products>
+
+                
                 <div class="stock-inventory__button">
                     <button type="submit"
                             [disabled]="form.invalid">
