@@ -1,0 +1,3 @@
+Yarn install
+
+Yarn start
