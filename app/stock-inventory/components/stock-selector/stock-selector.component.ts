@@ -17,7 +17,7 @@ import { Product } from '../../models/products.interface';
                 </option>
             </select>
             <input 
-                type="text"
+                type="number"
                 step="5"
                 min="5"
                 max="1000"

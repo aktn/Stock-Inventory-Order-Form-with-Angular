@@ -54,7 +54,12 @@ export class StockInventoryComponent{
             product_id: new FormControl(),
             quantity: new FormControl()
         }),
-        stocks: new FormArray([])
+        stocks: new FormArray([
+            new FormGroup({
+                product_id: new FormControl(1),
+                quantity: new FormControl(10)
+            })
+        ])
     })
 
     onSubmit(){

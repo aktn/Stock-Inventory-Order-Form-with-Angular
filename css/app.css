@@ -35,8 +35,7 @@ button {
   outline: 0;
 }
 input[type=text],
-input[type=email],
-input[type=number] {
+input[type=email]{
   border: none;
   background: #fff;
   font-size: 13px;
@@ -48,6 +47,19 @@ input[type=number] {
   display: block;
   margin-top: 10px;
   width: 100%;
+}
+input[type=number] {
+  border: none;
+  background: #fff;
+  font-size: 13px;
+  padding: 6px 30px 6px 10px;
+  border-radius: 1px;
+  box-shadow: 1px 1px 3px 1px #ccc;
+  border: 1px solid #eee;
+  margin-bottom: 1px solid #232323;
+  display: block;
+  margin-top: 10px;
+  width: 20%;
 }
 button {
   cursor: pointer;
