@@ -13,5 +13,5 @@ import { FormGroup } from '@angular/forms';
 
 export class StockProductsComponent{
     @Input()
-    parent: FromGroup;
+    parent: FormGroup;
 }

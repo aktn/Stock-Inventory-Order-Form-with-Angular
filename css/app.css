@@ -44,6 +44,7 @@ input[type=number] {
   border-radius: 1px;
   box-shadow: 1px 1px 3px 1px #ccc;
   border: 1px solid #eee;
+  margin-bottom: 1px solid #232323;
   display: block;
   margin-top: 10px;
   width: 100%;
