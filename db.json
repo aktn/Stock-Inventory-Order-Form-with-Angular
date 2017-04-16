@@ -1,1 +1,13 @@
-{}
+{
+    "cart": [
+        { "product_id": 1, "quantity": 10},
+        { "product_id": 2, "quantity": 20}
+    ],
+
+    "products": [
+        { "id": 1, "name": "Sun Glasses", "price": 10},
+        { "id": 2, "name": "Shorts", "price": 15},
+        { "id": 3, "name": "T-Shirt", "price": 22},
+        { "id": 4, "name": "Jeans", "price": 40}
+    ]
+}
