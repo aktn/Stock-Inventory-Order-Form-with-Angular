@@ -31,6 +31,10 @@ import { StockInventoryService } from '../../services/stock-inventory.service';
                     [map]="productMap">
                 </stock-products>
 
+                <div class="stock-inventory__total">
+                    Total: {{ total | currency: 'GDP': true }}
+                </div>
+
                 <div class="stock-inventory__button">
                     <button type="submit"
                             [disabled]="form.invalid">
@@ -47,6 +51,7 @@ export class StockInventoryComponent implements OnInit{
 
     products: Product[];
     productMap: Map<number, Product>;
+    total: number;
 
     form = this.fb.group({
         store: this.fb.group({
@@ -76,7 +81,10 @@ export class StockInventoryComponent implements OnInit{
                 this.products = products;
                 
                 cart.forEach(item => this.addStock(item));
-            })
+
+                this.calculateTotal(this.form.get('stocks').value);
+                this.form.get('stocks').valueChanges.subscribe(value=> this.calculateTotal(value));
+            });
     }
 
     createStock(stock){
@@ -94,6 +102,13 @@ export class StockInventoryComponent implements OnInit{
     removeStock({group, index}: { group: FormGroup, index: number}){
         const control = this.form.get('stocks') as FormArray;
         control.removeAt(index);
+    }
+
+    calculateTotal(value: Item[]){
+        const total = value.reduce((prev, next)=>{
+            return prev + (next.quantity * this.productMap.get(next.product_id).price);
+        },0);
+        this.total = total;
     }
 
     onSubmit(){
