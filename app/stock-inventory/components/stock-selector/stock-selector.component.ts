@@ -22,6 +22,11 @@ import { Product } from '../../models/products.interface';
                 min="5"
                 max="1000"
                 formControlName="quantity">
+            <stock-counter
+                [step]="5"
+                [min]="5"
+                [max]="1000">
+            </stock-counter>
             <button 
                 type="button"
                  (click)="onAdd()">
